@@ -4,7 +4,7 @@ import numpy as np
 
 # Paso 2.2: Definir Entradas y Pesos
 # En un perceptrón simple, las entradas están ponderadas por ciertos pesos.
-# Definamos nuestras entradas y pesos iniciales:
+# Definición de las entradas y pesos iniciales:
 
 # Definir las entradas (features)
 entradas = np.array([2.0, 3.0], dtype=float)
@@ -14,7 +14,7 @@ pesos = tf.Variable([1.0, -1.0], dtype=float)
 sesgo = tf.Variable(1.0, dtype=float)
 
 # Paso 2.3: Construir el Perceptrón
-# Ahora, construyamos nuestro perceptrón combinando las entradas con los pesos
+# Ahora, construyamos el perceptrón combinando las entradas con los pesos
 # y aplicando una función de activación. En este caso, utilizaremos la función escalón:
 
 # Calcular la suma ponderada de las entradas y pesos más el sesgo
@@ -24,7 +24,7 @@ suma_ponderada = tf.reduce_sum(tf.multiply(entradas, pesos)) + sesgo
 resultado = tf.where(suma_ponderada > 0.0, 1.0, 0.0)
 
 # Paso 2.4: Inicializar Variables y Ejecutar el Grafo
-# Antes de ejecutar nuestro perceptrón, inicialicemos las variables en TensorFlow
+# Antes de ejecutar el perceptrón, inicialicemos las variables en TensorFlow
 # y creemos una sesión:
 
 # Inicializar las variables
